@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS pokemart_db;
+
+CREATE DATABASE pokemart_db;
