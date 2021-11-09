@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
 const { Trainer, Pokemon, Order, Item } = require('../models');
 
-const userData = require('./trainerData.json');
+const trainerData = require('./trainerData.json');
 const pokemonData = require('./pokemonData.json');
 const itemData = require('./itemData.json');
 const orderData = require('./orderData.json');
