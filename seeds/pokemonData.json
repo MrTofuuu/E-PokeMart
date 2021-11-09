@@ -1,14 +1,23 @@
 [
     {
-        "name": "",
-        "description": ""
+        "pokemon_id": "",
+        "pokemon_name": "",
+        "pokemon_level": "",
+        "pokemon_type": "",
+        "price": ""
     },
     {
-        "name": "",
-        "description": ""
+        "pokemon_id": "",
+        "pokemon_name": "",
+        "pokemon_level": "",
+        "pokemon_type": "",
+        "price": ""
     },
     {
-        "name": "",
-        "description": ""
+        "pokemon_id": "",
+        "pokemon_name": "",
+        "pokemon_level": "",
+        "pokemon_type": "",
+        "price": ""
     }
 ]

@@ -1,8 +1,12 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const projectRoutes = require('./pokeRoutes');
+const trainerRoutes = require('./trainerRoutes');
+const pokemonRoutes = require('./pokemonRoutes');
+const itemRoutes = require('./itemRoutes');
+const orderRoutes = require('./orderRoutes');
 
-router.use('/users', userRoutes);
-router.use('/pokemon', pokeRoutes);
+router.use('/users', trainerRoutes);
+router.use('/items', itemRoutes);
+router.use('/pokemon', pokemonRoutes);
+router.use('/orders', orderRoutes);
 
 module.exports = router;

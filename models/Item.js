@@ -1,26 +1,22 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Pokemon extends Model {}
+class Item extends Model {}
 
-Pokemon.init(
+Item.init(
     {
-        pokemon_id: {
+        item_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        pokemon_name: {
+        item_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        pokemon_level: {
-            type: DataTypes.INTEGER,
-        },
-        pokemon_type: {
+        item_type: {
             type: DataTypes.STRING,
-            allowNull: false,
         },
         price: {
             type: DataTypes.DECIMAL,

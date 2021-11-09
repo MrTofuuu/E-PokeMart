@@ -1,29 +1,33 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Pokemon extends Model {}
+class Order extends Model {}
 
-Pokemon.init(
+Order.init(
     {
-        pokemon_id: {
+        order_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
-        pokemon_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        pokemon_level: {
+        trainer_id: {
             type: DataTypes.INTEGER,
+            references: {
+                model: 'trainer',
+                key: 'id',
+            },
+            allowNull: false,
         },
-        pokemon_type: {
+        order_date: {
+            type: DataTypes.DATE,
+        },
+        order_status: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        price: {
-            type: DataTypes.DECIMAL,
+        order_quantity: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
     },
@@ -32,7 +36,7 @@ Pokemon.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'pokemon',
+        modelName: 'order',
     }
 );
 

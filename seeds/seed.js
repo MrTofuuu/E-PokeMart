@@ -1,25 +1,23 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { Trainer, Pokemon, Order, Item } = require('../models');
 
-const userData = require('./userData.json');
+const userData = require('./trainerData.json');
 const pokemonData = require('./pokemonData.json');
+const itemData = require('./itemData.json');
+const orderData = require('./orderData.json');
 
-const seedDatabase = async () => {
+const seedAll = async () => {
     await sequelize.sync({ force: true });
 
-    const users = await User.bulkCreate(userData, {
-        individualHooks: true,
-        returning: true,
-    });
+    await trainerData();
 
-    for (const pokemon of pokemonData) {
-        await Pokemon.create({
-            ...pokemon,
-            user_id: users[Math.floor(Math.random() * users.length)].id,
-        });
-    }
+    await pokemonData();
+
+    await itemData();
+
+    await orderData();
 
     process.exit(0);
 };
 
-seedDatabase();
+seedAll();

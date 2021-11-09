@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Item } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-        const newPokemon = await PokeMon.create({
+        const newItem = await Item.create({
             ...req.body,
             user_id: req.session.user_id,
         });
 
-        res.status(200).json(newPokemon);
+        res.status(200).json(newItem);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -16,19 +16,19 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        const pokemonData = await Pokemon.destroy({
+        const itemData = await Item.destroy({
             where: {
                 id: req.params.id,
                 user_id: req.session.user_id,
             },
         });
 
-        if (!pokemonData) {
-            res.status(404).json({ message: 'No pokemon found with this id!' });
+        if (!itemData) {
+            res.status(404).json({ message: 'No item found with this id!' });
             return;
         }
 
-        res.status(200).json(pokemonData);
+        res.status(200).json(itemData);
     } catch (err) {
         res.status(500).json(err);
     }
