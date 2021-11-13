@@ -9,13 +9,25 @@ const orderData = require('./orderData.json');
 const seedAll = async () => {
     await sequelize.sync({ force: true });
 
-    await trainerData();
+    await Trainer.bulkCreate(trainerData, {
+        individualHooks:true,
+        returning:true,
+    });
 
-    await pokemonData();
+    await Pokemon.bulkCreate(pokemonData,{
+        individualHooks:true,
+        returning:true,
+    });
 
-    await itemData();
+    await Item.bulkCreate(itemData,{
+        individualHooks:true,
+        returning:true,
+    });
 
-    await orderData();
+    await Order.bulkCreate(orderData,{
+        individualHooks:true,
+        returning:true,
+    });
 
     process.exit(0);
 };
