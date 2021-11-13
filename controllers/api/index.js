@@ -4,7 +4,7 @@ const pokemonRoutes = require('./pokemonRoutes');
 const itemRoutes = require('./itemRoutes');
 const orderRoutes = require('./orderRoutes');
 
-router.use('/users', trainerRoutes);
+router.use('/trainers', trainerRoutes);
 router.use('/items', itemRoutes);
 router.use('/pokemon', pokemonRoutes);
 router.use('/orders', orderRoutes);

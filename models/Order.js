@@ -15,7 +15,7 @@ Order.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'trainer',
-                key: 'id',
+                key: 'trainer_id',
             },
             allowNull: false,
         },
@@ -40,4 +40,4 @@ Order.init(
     }
 );
 
-module.exports = Pokemon;
+module.exports = Order;

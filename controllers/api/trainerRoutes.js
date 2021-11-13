@@ -3,10 +3,10 @@ const { Trainer } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-        const trainerData = await User.create(req.body);
+        const trainerData = await Trainer.create(req.body);
 
         req.session.save(() => {
-            req.session.user_id = userData.id;
+            req.session.trainer_id = trainerData.id;
             req.session.logged_in = true;
 
             res.status(200).json(trainerData);
@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const trainerData = await User.findOne({
+        const trainerData = await Trainer.findOne({
             where: { email: req.body.email },
         });
 
@@ -41,10 +41,10 @@ router.post('/login', async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.user_id = trainerData.id;
+            req.session.trainer_id = trainerData.id;
             req.session.logged_in = true;
 
-            res.json({ user: userData, message: 'You are now logged in!' });
+            res.json({ trainer: trainerData, message: 'You are now logged in!' });
         });
     } catch (err) {
         res.status(400).json(err);

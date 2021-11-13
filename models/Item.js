@@ -28,8 +28,8 @@ Item.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'pokemon',
+        modelName: 'item',
     }
 );
 
-module.exports = Pokemon;
+module.exports = Item;
