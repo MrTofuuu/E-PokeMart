@@ -237,7 +237,123 @@
         "pokemon_ability": "Overgrow",
         "pokemon_type": "Grass",
         "pokemon_moves": "Vinewhip",
-        "stats": [
+        "pokemon_stats": [
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 49,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 49,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 1,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "155",
+        "pokemon_name": "Cyndaquil",
+        "pokemon_ability": "Blaze",
+        "pokemon_type": "Fire",
+        "pokemon_moves": "Ember",
+        "pokemon_stats": [
+            {
+              "base_stat": 39,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 52,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 43,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 60,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 1,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "158",
+        "pokemon_name": "Totodile",
+        "pokemon_ability": "Torrent",
+        "pokemon_type": "Water",
+        "pokemon_moves": "Water-gun",
+        "pokemon_stats": [
             {
               "base_stat": 45,
               "effort": 0,
@@ -291,13 +407,13 @@
     },
     {
         "pokemon_id": "158",
-        "pokemon_name": "Totodile",
-        "pokemon_ability": "Torrent",
-        "pokemon_type": "Water",
-        "pokemon_moves": "Water-gun",
+        "pokemon_name": "Treecko",
+        "pokemon_ability": "Overgrow",
+        "pokemon_type": "Grass",
+        "pokemon_moves": "Mega-drain",
         "stats": [
             {
-              "base_stat": 45,
+              "base_stat": 40,
               "effort": 0,
               "stat": {
                 "name": "hp",
@@ -305,7 +421,7 @@
               }
             },
             {
-              "base_stat": 49,
+              "base_stat": 45,
               "effort": 0,
               "stat": {
                 "name": "attack",
@@ -313,7 +429,7 @@
               }
             },
             {
-              "base_stat": 65,
+              "base_stat": 35,
               "effort": 0,
               "stat": {
                 "name": "defense",
@@ -321,7 +437,7 @@
               }
             },
             {
-              "base_stat": 49,
+              "base_stat": 65,
               "effort": 0,
               "stat": {
                 "name": "special-attack",
@@ -329,16 +445,16 @@
               }
             },
             {
-              "base_stat": 65,
-              "effort": 1,
+              "base_stat": 55,
+              "effort": 0,
               "stat": {
                 "name": "special-defense",
                 "url": "https://pokeapi.co/api/v2/stat/5/"
               }
             },
             {
-              "base_stat": 45,
-              "effort": 0,
+              "base_stat": 70,
+              "effort": 1,
               "stat": {
                 "name": "speed",
                 "url": "https://pokeapi.co/api/v2/stat/6/"
@@ -347,4 +463,5 @@
           ],        
         "price": ""
     }
+
 ]
