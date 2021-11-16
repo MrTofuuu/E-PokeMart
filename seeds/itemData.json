@@ -4,21 +4,21 @@
         "item_name": "Master ball",
         "item_type": "pokeball",
         "price": "1",
-        "trainer_id": null
+        "trainer_id": "1"
     },
     {
         "item_id": "2",
         "item_name": "Awakening",
         "item_type": "Medical item",
         "price": "1",
-        "trainer_id": null
+        "trainer_id": "2"
     },
     {
         "item_id": "3",
         "item_name": "Paralyze-heal",
         "item_type": "Medical item",
         "price": "1",
-        "trainer_id": null
+        "trainer_id": "3"
     },
     {
         "item_id": "4",
