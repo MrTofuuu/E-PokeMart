@@ -1,5 +1,44 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+html {
+  background-image: linear-gradient(to bottom right, #fee792, #fffeef, #80cce3);
+}
+body {
+  font-family: 'Exo', sans-serif;
+  background-image: linear-gradient(to bottom right, #fee792, #fffeef, #80cce3);
+}
+footer {
+  color: #b3a125;
+}
+.dropdown {
+  height: 2em;
+  width: 2em;
+}
+.dropdown2 {
+  height: 2em;
+  width: 2em;
+  padding-right: 1%;
+}
+li {
+  list-style-type: none;
+}
+
+.nav-cont {
+  background-color: #005c96;
+}
+.featureCap {
+  color: #005c96;
+}
+
+.greeting {
+  padding: 50px;
+}
+
+.featureText {
+  padding: 50px;
+}
+
+.pokeLogo {
+  height: 80px;
+  width: 160px;
 }
 
 .no-button {
@@ -15,10 +54,4 @@ header, .project:not(:last-child) {
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
 }
