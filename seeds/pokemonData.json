@@ -232,6 +232,64 @@
         "price": ""
     },
     {
+        "pokemon_id": "133",
+        "pokemon_name": "Eevee",
+        "pokemon_ability": "Run-away",
+        "pokemon_type": "Normal",
+        "pokemon_moves": "Headbutt",
+        "pokemon_stats": [
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 1,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
         "pokemon_id": "152",
         "pokemon_name": "Chikorita",
         "pokemon_ability": "Overgrow",
@@ -406,12 +464,12 @@
         "price": ""
     },
     {
-        "pokemon_id": "158",
+        "pokemon_id": "252",
         "pokemon_name": "Treecko",
         "pokemon_ability": "Overgrow",
         "pokemon_type": "Grass",
         "pokemon_moves": "Mega-drain",
-        "stats": [
+        "pokemon_stats": [
             {
               "base_stat": 40,
               "effort": 0,
@@ -462,6 +520,991 @@
             }
           ],        
         "price": ""
+    },
+    {
+        "pokemon_id": "255",
+        "pokemon_name": "Torchic",
+        "pokemon_ability": "Blaze",
+        "pokemon_type": "Fire",
+        "pokemon_moves": "Ember",
+        "pokemon_stats": [
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 60,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 70,
+              "effort": 1,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "258",
+        "pokemon_name": "Mudkip",
+        "pokemon_ability": "Torrent",
+        "pokemon_type": "Water",
+        "pokemon_moves": "Water-gun",
+        "pokemon_stats": [
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 70,
+              "effort": 1,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "387",
+        "pokemon_name": "Turtwig",
+        "pokemon_ability": "Overgrow",
+        "pokemon_type": "Grass",
+        "pokemon_moves": "Razor-Leaf",
+        "pokemon_stats": [
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 68,
+              "effort": 1,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 64,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 31,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "390",
+        "pokemon_name": "Chimchar",
+        "pokemon_ability": "Blaze",
+        "pokemon_type": "Fire",
+        "pokemon_moves": "Flame-wheel",
+        "pokemon_stats": [
+            {
+              "base_stat": 44,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 58,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 44,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 58,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 44,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 61,
+              "effort": 1,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "393",
+        "pokemon_name": "Piplup",
+        "pokemon_ability": "Torrent",
+        "pokemon_type": "Water",
+        "pokemon_moves": "Bubble-beam",
+        "pokemon_stats": [
+            {
+              "base_stat": 53,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 51,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 53,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 61,
+              "effort": 1,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 56,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "495",
+        "pokemon_name": "Snivy",
+        "pokemon_ability": "Overgrow",
+        "pokemon_type": "Grass",
+        "pokemon_moves": "Vine-whip",
+        "pokemon_stats": [
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 63,
+              "effort": 1,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "498",
+        "pokemon_name": "Tepig",
+        "pokemon_ability": "Blaze",
+        "pokemon_type": "Fire",
+        "pokemon_moves": "Ember",
+        "pokemon_stats": [
+            {
+              "base_stat": 65,
+              "effort": 1,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 63,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "501",
+        "pokemon_name": "Oshawott",
+        "pokemon_ability": "Torrent",
+        "pokemon_type": "Water",
+        "pokemon_moves": "Aqua-jet",
+        "pokemon_stats": [
+            {
+              "base_stat": 65,
+              "effort": 1,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 63,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "650",
+        "pokemon_name": "Chespin",
+        "pokemon_ability": "Overgrow",
+        "pokemon_type": "Grass",
+        "pokemon_moves": "Razor-leaf",
+        "pokemon_stats": [
+            {
+              "base_stat": 56,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 61,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 1,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 48,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 38,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "653",
+        "pokemon_name": "Fennekin",
+        "pokemon_ability": "Blaze",
+        "pokemon_type": "Fire",
+        "pokemon_moves": "Ember",
+        "pokemon_stats": [
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 62,
+              "effort": 1,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 60,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 60,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "656",
+        "pokemon_name": "Froakie",
+        "pokemon_ability": "Torrent",
+        "pokemon_type": "Water",
+        "pokemon_moves": "Water-gun",
+        "pokemon_stats": [
+            {
+              "base_stat": 41,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 56,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 62,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 44,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 71,
+              "effort": 1,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "722",
+        "pokemon_name": "Rowlet",
+        "pokemon_ability": "Overgrow",
+        "pokemon_type": "Grass",
+        "pokemon_moves": "Razor-leaf",
+        "pokemon_stats": [
+            {
+              "base_stat": 68,
+              "effort": 1,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 55,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 42,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "725",
+        "pokemon_name": "Litten",
+        "pokemon_ability": "Blaze",
+        "pokemon_type": "Fire",
+        "pokemon_moves": "Ember",
+        "pokemon_stats": [
+            {
+              "base_stat": 45,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 60,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 70,
+              "effort": 1,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "728",
+        "pokemon_name": "Popplio",
+        "pokemon_ability": "Torrent",
+        "pokemon_type": "Water",
+        "pokemon_moves": "Water-gun",
+        "pokemon_stats": [
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 54,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 54,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 66,
+              "effort": 1,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 56,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "810",
+        "pokemon_name": "Grookey",
+        "pokemon_ability": "Overgrow",
+        "pokemon_type": "Grass",
+        "pokemon_moves": "Branch-poke",
+        "pokemon_stats": [
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 1,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 65,
+              "effort": 0,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "813",
+        "pokemon_name": "Scorbunny",
+        "pokemon_ability": "Blaze",
+        "pokemon_type": "Fire",
+        "pokemon_moves": "Flame-wheel",
+        "pokemon_stats": [
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 71,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 69,
+              "effort": 1,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
+    },
+    {
+        "pokemon_id": "816",
+        "pokemon_name": "Sobble",
+        "pokemon_ability": "Torrent",
+        "pokemon_type": "Water",
+        "pokemon_moves": "Water-gun",
+        "pokemon_stats": [
+            {
+              "base_stat": 50,
+              "effort": 0,
+              "stat": {
+                "name": "hp",
+                "url": "https://pokeapi.co/api/v2/stat/1/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "attack",
+                "url": "https://pokeapi.co/api/v2/stat/2/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 0,
+              "stat": {
+                "name": "defense",
+                "url": "https://pokeapi.co/api/v2/stat/3/"
+              }
+            },
+            {
+              "base_stat": 70,
+              "effort": 0,
+              "stat": {
+                "name": "special-attack",
+                "url": "https://pokeapi.co/api/v2/stat/4/"
+              }
+            },
+            {
+              "base_stat": 40,
+              "effort": 1,
+              "stat": {
+                "name": "special-defense",
+                "url": "https://pokeapi.co/api/v2/stat/5/"
+              }
+            },
+            {
+              "base_stat": 70,
+              "effort": 1,
+              "stat": {
+                "name": "speed",
+                "url": "https://pokeapi.co/api/v2/stat/6/"
+              }
+            }
+          ],        
+        "price": ""
     }
-
 ]
