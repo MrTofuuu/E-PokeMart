@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const session = require('express-session');
 const routes = require('./controllers');
 const exphbs = require('express-handlebars');
@@ -19,6 +20,9 @@ const sess = {
     db: sequelize
   })
 };
+
+//start logging prior to routing
+app.use(morgan('combined'))
 
 app.use(session(sess));
 app.engine('handlebars', hbs.engine);

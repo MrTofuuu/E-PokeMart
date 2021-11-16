@@ -1,5 +1,6 @@
 [
     {
+       
         "full_name": "Sal Amander",
         "email": "sal@hotmail.com",
         "password": "password",
@@ -17,5 +18,16 @@
         "email": "Boonie@gmail.com",
         "password": "password2",
         "trainer_id": "3"
+    },
+    {    
+        "full_name": "Lernantino",
+        "email": "lernantino@gmail.com",
+        "password": "password12345"
+    },
+    {
+        
+        "full_name": "Amiko",
+        "email": "amiko2k20@aol.com",
+        "password": "password12345"
     }
 ]
