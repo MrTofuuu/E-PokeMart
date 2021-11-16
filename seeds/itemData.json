@@ -1,20 +1,143 @@
 [
     {
-        
-        "item_name": "",
-        "item_type": "",
-        "price": ""
+        "item_id": "1",
+        "item_name": "Master ball",
+        "item_type": "pokeball",
+        "price": "$1",
+        "trainer_id": "1"
     },
     {
-        
-        "item_name": "",
-        "item_type": "",
-        "price": ""
+        "item_id": "2",
+        "item_name": "Awakening",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "2"
     },
     {
-       
-        "item_name": "",
-        "item_type": "",
-        "price": ""
+        "item_id": "3",
+        "item_name": "Paralyze-heal",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "3"
+    },
+    {
+        "item_id": "4",
+        "item_name": "full-restore",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "1"
+    },
+    {
+        "item_id": "5",
+        "item_name": "max-potion",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "2"
+    },
+    {
+        "item_id": "6",
+        "item_name": "hyper-potion",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "3"
+    },
+    {
+        "item_id": "7",
+        "item_name": "super-potion",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "1"
+    },
+    {
+        "item_id": "8",
+        "item_name": "Ultra Ball",
+        "item_type": "pokeball",
+        "price": "$1",
+        "trainer_id": "2"
+    },
+    {
+        "item_id": "9",
+        "item_name": "Great ball",
+        "item_type": "pokeball",
+        "price": "$1",
+        "trainer_id": "3"
+    },
+    {
+        "item_id": "10",
+        "item_name": "Poke ball",
+        "item_type": "pokeball",
+        "price": "$1",
+        "trainer_id": "1"
+    },
+    {
+        "item_id": "11",
+        "item_name": "Potion",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "2"
+    },
+    {
+        "item_id": "12",
+        "item_name": "Full heal",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "3"
+    },
+    {
+        "item_id": "13",
+        "item_name": "Revive",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "1"
+    },
+    {
+        "item_id": "14",
+        "item_name": "Max revive",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "2"
+    },
+    {
+        "item_id": "15",
+        "item_name": "X Attack",
+        "item_type": "Battle item",
+        "price": "$1",
+        "trainer_id": "3"
+    },
+    {
+        "item_id": "16",
+        "item_name": "X Defend",
+        "item_type": "Battle item",
+        "price": "$1",
+        "trainer_id": "1"
+    },
+    {
+        "item_id": "17",
+        "item_name": "X Speed",
+        "item_type": "Battle item",
+        "price": "$1",
+        "trainer_id": "2"
+    },
+    {
+        "item_id": "18",
+        "item_name": "X Special",
+        "item_type": "Battle item",
+        "price": "$1",
+        "trainer_id": "3"
+    },
+    {
+        "item_id": "19",
+        "item_name": "Burn heal",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "1"
+    },
+    {
+        "item_id": "20",
+        "item_name": "Ice heal",
+        "item_type": "Medical item",
+        "price": "$1",
+        "trainer_id": "2"
     }
+
 ]
