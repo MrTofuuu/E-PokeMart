@@ -22,6 +22,14 @@ Item.init(
             type: DataTypes.DECIMAL,
             allowNull: false,
         },
+        trainer_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'trainer',
+                key: 'trainer_id',
+            },
+            allowNull: true,
+        },
     },
     {
         sequelize,
