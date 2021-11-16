@@ -1,5 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
+const fs = require('fs');
+const path = require('path');
+const dirPath = path.join(__dirname, '/logs');
 const session = require('express-session');
 const routes = require('./controllers');
 const exphbs = require('express-handlebars');
@@ -21,8 +24,12 @@ const sess = {
   })
 };
 
+
+// create a write stream (in append mode)
+let accessLogStream = fs.createWriteStream(path.join(dirPath, 'apiRequests.log'), { flags: 'a' });
+
 //start logging prior to routing
-app.use(morgan('combined'))
+app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(session(sess));
 app.engine('handlebars', hbs.engine);
