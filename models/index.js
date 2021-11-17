@@ -24,15 +24,15 @@ item.hasOne(trainer, {
 });
 
 order.hasOne(trainer, {
-    foreignKey: 'trainer_id',
+    foreignKey: 'order_id',
 });
 
 order.hasMany(pokemon, {
-    foreignKey: 'pokemon_id',
+    foreignKey: 'order_id',
 });
 
 order.hasMany(item, {
-    foreignKey: 'item_id',
+    foreignKey: 'order_id',
 });
 
 module.exports = { trainer, pokemon, item, order };
