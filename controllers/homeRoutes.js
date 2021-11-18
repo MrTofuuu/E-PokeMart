@@ -32,7 +32,36 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+// GET all pokemon
+router.get('/pokemon', async (req, res) => {
+  try {
+    const pokemonData = await Pokemon.findAll();
+    res.status(200).json(pokemonData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
+
+// GET all orders
+router.get('/orders', async (req, res) => {
+  try {
+    const orderData = await Order.findAll();
+    res.status(200).json(orderData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// GET all items
+router.get('/items', async (req, res) => {
+  try {
+    const itemData = await Item.findAll();
+    res.status(200).json(itemData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 router.get('/pokemon/:id', async (req, res) => {
   try {
     const pokemonData = await Pokemon.findByPk(req.params.id, {
@@ -55,7 +84,7 @@ router.get('/pokemon/:id', async (req, res) => {
   }
 });
 
-router.get('/item/:id', async (req, res) => {
+router.get('/items/:id', async (req, res) => {
   try {
     const itemData = await Item.findByPk(req.params.id, {
       include: [
