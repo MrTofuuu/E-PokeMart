@@ -7,7 +7,12 @@ body {
 }
 footer {
   color: #b3a125;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
+
 .dropdown {
   height: 2em;
   width: 2em;
