@@ -3,36 +3,36 @@ const Item = require('./Item');
 const Pokemon = require('./Pokemon');
 const Order = require('./Order');
 
-trainer.hasMany(pokemon, {
+Trainer.hasMany(Pokemon, {
     foreignKey: 'trainer_id',
 });
 
-trainer.hasMany(item, {
+Trainer.hasMany(Item, {
     foreignKey: 'trainer_id',
 });
 
-trainer.hasMany(order, {
+Trainer.hasMany(Order, {
     foreignKey: 'trainer_id',
 });
 
-pokemon.hasOne(trainer, {
+Pokemon.hasOne(Trainer, {
     foreignKey: 'pokemon_id',
 });
 
-item.hasOne(trainer, {
+Item.hasOne(Trainer, {
     foreignKey: 'item_id',
 });
 
-order.hasOne(trainer, {
+Order.hasOne(Trainer, {
     foreignKey: 'order_id',
 });
 
-order.hasMany(pokemon, {
+Order.hasMany(Pokemon, {
     foreignKey: 'order_id',
 });
 
-order.hasMany(item, {
+Order.hasMany(Item, {
     foreignKey: 'order_id',
 });
 
-module.exports = { trainer, pokemon, item, order };
+module.exports = { Trainer, Pokemon, Item, Order };
