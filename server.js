@@ -20,13 +20,15 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
-
 // create a write stream (in append mode)
-let accessLogStream = fs.createWriteStream(path.join(dirPath, 'apiRequests.log'), { flags: 'a' });
+let accessLogStream = fs.createWriteStream(
+  path.join(dirPath, 'apiRequests.log'),
+  { flags: 'a' }
+);
 
 //start logging prior to routing
 app.use(morgan('combined', { stream: accessLogStream }));
