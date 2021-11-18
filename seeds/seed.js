@@ -7,6 +7,7 @@ const itemData = require('./itemData.json');
 const orderData = require('./orderData.json');
 
 const seedAll = async () => {
+    try{
     await sequelize.sync({ force: true });
 
     await Trainer.bulkCreate(trainerData, {
@@ -28,7 +29,9 @@ const seedAll = async () => {
         individualHooks:true,
         returning:true,
     });
-
+    }catch(err){
+        console.log(err)
+    }
     process.exit(0);
 };
 
