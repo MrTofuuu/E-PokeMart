@@ -1,11 +1,22 @@
 const router = require('express').Router();
 const { Pokemon } = require('../../models');
 
+// GET all pokemon
+router.get('/', async (req, res) => {
+    try {
+      const pokemonData = await Pokemon.findAll();
+      res.status(200).json(pokemonData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
+
+  
 router.post('/', async (req, res) => {
     try {
-        const newPokemon = await PokeMon.create({
+        const newPokemon = await Pokemon.create({
             ...req.body,
-            user_id: req.session.user_id,
+            trainer_id: req.session.trainer_id,
         });
 
         res.status(200).json(newPokemon);
@@ -18,8 +29,8 @@ router.delete('/:id', async (req, res) => {
     try {
         const pokemonData = await Pokemon.destroy({
             where: {
-                id: req.params.id,
-                user_id: req.session.user_id,
+                pokemon_id: req.params.id,
+                trainer_id: req.session.trainer_id,
             },
         });
 
