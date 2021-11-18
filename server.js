@@ -1,6 +1,5 @@
 const express = require('express');
 const morgan = require('morgan');
-//const fs = require('fs');
 const rfs = require('rotating-file-stream');
 const path = require('path');
 const dirPath = path.join(__dirname, '/logs');
@@ -25,17 +24,13 @@ const sess = {
   })
 };
 
-//custom morgan token
-morgan.token("custom", ":date A new :method request for :url was received. The version of the HTTP request was :http-version. It took this long for a response :response-time[3]. It took a total of :total-time[3] to complete. The IP address of the request was :remote-addr");
+morgan.token("custom", ":date[clf] A new :method request for :url was received. The version of the HTTP request was :http-version. It took this long for a response :response-time[3]. It took a total of :total-time[3] to complete. The IP address of the request was :remote-addr");
 
-// create a write stream (in append mode)
-//let accessLogStream = fs.createWriteStream(path.join(dirPath, 'apiRequests.log'), { flags: 'a' });
 let accessLogStream = rfs.createStream('apiRequests.log',{
   interval: '2d',
   path: path.join(__dirname, 'log')
 })
 
-//start logging prior to routing
 app.use(morgan('custom', { stream: accessLogStream }));
 
 app.use(session(sess));
