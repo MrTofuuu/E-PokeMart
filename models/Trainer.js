@@ -35,23 +35,6 @@ Trainer.init(
                 len: [8],
             },
         },
-        pokemon_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'pokemon',
-                key: 'pokemon_id',
-            },
-            allowNull: false,
-        },
-        item_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'item',
-                key: 'item_id',
-            },
-            allowNull: false,
-        },
-
     },
     {
         hooks: {

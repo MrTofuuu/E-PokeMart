@@ -3,21 +3,17 @@
        
         "full_name": "Sal Amander",
         "email": "sal@hotmail.com",
-        "password": "password",
-        "trainer_id": "1"
+        "password": "password"
     },
     {
         "full_name": "Chris Stallcup",
         "email": "Chris@gmail.com",
-        "password": "password1",
-        "trainer_id": "2"
-
+        "password": "password1"
     },
     {
         "full_name": "Bonnie Reed",
         "email": "Boonie@gmail.com",
-        "password": "password2",
-        "trainer_id": "3"
+        "password": "password2"
     },
     {    
         "full_name": "Lernantino",
