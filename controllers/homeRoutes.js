@@ -1,19 +1,96 @@
 const router = require('express').Router();
-const { Trainer } = require('../models');
+const { Trainer, Pokemon, Item } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+
+router.get('/', async (req, res) => {
   try {
-    const trainerData = await Trainer.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    // Get all pokemons and JOIN with trainer data
+    const pokemonData = await Pokemon.findAll({
+      include: [
+        {
+          model: Trainer,
+          attributes: ['full_name'],
+        },
+        {
+          model: Item,
+          attributes: ['item_id','item_name','item_type','price']
+        },
+      ],
     });
 
-    const trainers = trainerData.map((project) => project.get({ plain: true }));
+    // Serialize data so the template can read it
+    const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
+    
 
-    res.render('homepage', {
-      trainers,
-      logged_in: req.session.logged_in,
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      pokemons, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/pokemon/:id', async (req, res) => {
+  try {
+    const pokemonData = await Pokemon.findByPk(req.params.id, {
+      include: [
+        {
+          model: Trainer,
+          attributes: ['full_name'],
+        },
+      ],
+    });
+
+    const pokemon = pokemonData.get({ plain: true });
+
+    res.render('pokemon', {
+      ...pokemon,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/item/:id', async (req, res) => {
+  try {
+    const itemData = await Item.findByPk(req.params.id, {
+      include: [
+        {
+          model: Trainer,
+          attributes: ['full_name'],
+        },
+      ],
+    });
+
+    const item = itemData.get({ plain: true });
+
+    res.render('item', {
+      ...item,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Use withAuth middleware to prevent access to route
+router.get('/trainer', withAuth, async (req, res) => {
+  try {
+    // Find the logged in trainer based on the session ID
+    const trainerData = await Trainer.findByPk(req.session.trainer_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Pokemon, Item }],
+    });
+
+    const trainer = trainerData.get({ plain: true });
+
+    res.render('trainer', {
+      ...trainer,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
@@ -21,8 +98,9 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  // If the trainer is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/trainer');
     return;
   }
 

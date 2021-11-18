@@ -1,11 +1,21 @@
 const router = require('express').Router();
 const { Item } = require('../../models');
 
+// GET all items
+router.get('/', async (req, res) => {
+    try {
+      const itemData = await Item.findAll();
+      res.status(200).json(itemData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
+
 router.post('/', async (req, res) => {
     try {
         const newItem = await Item.create({
             ...req.body,
-            user_id: req.session.user_id,
+            trainer_id: req.session.trainer_id,
         });
 
         res.status(200).json(newItem);
@@ -18,8 +28,8 @@ router.delete('/:id', async (req, res) => {
     try {
         const itemData = await Item.destroy({
             where: {
-                id: req.params.id,
-                user_id: req.session.user_id,
+                item_id: req.params.id,
+                trainer_id: req.session.trainer_id,
             },
         });
 
