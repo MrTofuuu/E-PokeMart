@@ -21,12 +21,11 @@ router.get('/', async (req, res) => {
 
     // // Serialize data so the template can read it
     // const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
-    // console.log(pokemons);
     
 
     // Pass serialized data and session flag into template
-    res.render('layouts/main', { 
-      
+    res.render('homepage', { 
+      // pokemons, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -37,11 +36,12 @@ router.get('/', async (req, res) => {
 router.get('/pokemon', async (req, res) => {
   try {
     const pokemonData = await Pokemon.findAll();
-
+    // res.status(200).json(pokemonData);
     const pokemon = pokemonData.get({ plain: true });
 
     res.render('pokemon', {
-      ...pokemon
+      ...pokemon,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
