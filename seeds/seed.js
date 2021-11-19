@@ -2,10 +2,9 @@ const sequelize = require('../config/connection');
 const { Trainer, Pokemon, Order, Item } = require('../models');
 
 const trainerData = require('./trainerData.json');
-const pokemonData = require('./pokemonData');
-const itemData = require('./itemData.json');
-const orderData = require('./orderData.json');
-const seedPokemon = require('./pokemonData');
+const seedItems = require('./itemData.js');
+const seedOrders = require('./orderData.js');
+const seedPokemon = require('./pokemonData.js');
 
 const seedAll = async () => {
   try {
@@ -18,15 +17,9 @@ const seedAll = async () => {
 
     await seedPokemon();
 
-    await Item.bulkCreate(itemData, {
-      individualHooks: true,
-      returning: true,
-    });
+    await seedItems();
 
-    await Order.bulkCreate(orderData, {
-      individualHooks: true,
-      returning: true,
-    });
+    await seedOrders();
   } catch (err) {
     console.log(err);
   }

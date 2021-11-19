@@ -30,10 +30,8 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-// // GET all pokemon
-//
 
-// GET all galleries for homepage
+// GET all pokemon for homepage
 router.get('/', async (req, res) => {
   console.log('pokemon');
   try {
@@ -81,7 +79,7 @@ router.get('/:id', async (req, res) => {
 
     const pokemons = pokemonData.get({ plain: true });
 
-    res.render('/:id', { pokemons });
+    res.render('pokemon', { pokemons });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -89,67 +87,106 @@ router.get('/:id', async (req, res) => {
 });
 //---------
 // GET all orders
-router.get('/orders', async (req, res) => {
-  try {
-    const orderData = await Order.findAll();
-    res.status(200).json(orderData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// GET all items
-router.get('/items', async (req, res) => {
-  try {
-    const itemData = await Item.findAll();
-    res.status(200).json(itemData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-// router.get('/pokemon/:id', async (req, res) => {
-//   try {
-//     const pokemonData = await Pokemon.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: Trainer,
-//           attributes: ['full_name'],
-//         },
-//       ],
-//     });
-
-//     const pokemon = pokemonData.get({ plain: true });
-
-//     res.render('pokemon', {
-//       ...pokemon,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-router.get('/items/:id', async (req, res) => {
+router.get('/', async (req, res) => {
+  console.log('item');
   try {
     const itemData = await Item.findByPk(req.params.id, {
       include: [
         {
-          model: Trainer,
-          attributes: ['full_name'],
+          model: Item,
+          attributes: ['item_name', 'item_type', 'price'],
         },
       ],
     });
 
-    const item = itemData.get({ plain: true });
+    const items = itemData.map((item) => item.get({ plain: true }));
 
-    res.render('item', {
-      ...item,
-      logged_in: req.session.logged_in,
+    res.render('/items', {
+      items,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
+
+//---------
+router.get('/:id', async (req, res) => {
+  try {
+    const itemData = await Item.findByPk(req.params.id, {
+      include: [
+        {
+          model: Item,
+          attributes: ['item_name', 'item_type', 'price'],
+        },
+      ],
+    });
+
+    const items = itemData.get({ plain: true });
+
+    res.render('item', { items });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+//---
+//get all orders
+router.get('/', async (req, res) => {
+  console.log('order');
+  try {
+    const orderData = await Order.findByPk(req.params.id, {
+      include: [
+        {
+          model: Item,
+          attributes: [
+            'order_id',
+            'order_date',
+            'order_status',
+            'order_quantity',
+          ],
+        },
+      ],
+    });
+
+    const orders = orderData.map((item) => item.get({ plain: true }));
+
+    res.render('/orders', {
+      orders,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//---------
+router.get('/:id', async (req, res) => {
+  try {
+    const orderData = await Item.findByPk(req.params.id, {
+      include: [
+        {
+          model: Order,
+          attributes: [
+            'order_id',
+            'order_date',
+            'order_status',
+            'order_quantity',
+          ],
+        },
+      ],
+    });
+
+    const orders = orderData.get({ plain: true });
+
+    res.render('orders', { orders });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//---
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
