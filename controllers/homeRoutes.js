@@ -5,26 +5,8 @@ const withAuth = require('../utils/auth');
 // render hompage
 router.get('/', async (req, res) => {
   try {
-    // // Get all pokemons and JOIN with trainer data
-    // const pokemonData = await Pokemon.findAll({
-    //   include: [
-    //     {
-    //       model: Trainer,
-    //       attributes: ['full_name'],
-    //     },
-    //     {
-    //       model: Item,
-    //       attributes: ['item_id','item_name','item_type','price']
-    //     },
-    //   ],
-    // });
-
-    // // Serialize data so the template can read it
-    // const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
+    // render homepage 
     res.render('homepage', {
-      // pokemons,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
