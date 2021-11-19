@@ -11,14 +11,14 @@ Pokemon.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        pokemon_name: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        pokemon_level: {
+        level: {
             type: DataTypes.INTEGER,
         },
-        pokemon_type: {
+        type: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -34,7 +34,7 @@ Pokemon.init(
             },
             allowNull: true,
         },
-        pokemon_sprites: {
+        sprites: {
             type: DataTypes.STRING,
             allowNull: false,
         },
