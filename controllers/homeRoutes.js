@@ -38,7 +38,7 @@ router.get('/pokemon', async (req, res) => {
     const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
 
     res.render('pokemon', {
-      ...pokemons,
+      pokemons,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -53,7 +53,7 @@ router.get('/order', async (req, res) => {
     const orders = orderData.map((order) => order.get({ plain: true }));
 
     res.render('order', {
-      ...orders,
+      orders,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -68,7 +68,7 @@ router.get('/items', async (req, res) => {
     const items = itemData.map((item) => item.get({ plain: true }));
 
     res.render('items', {
-      ...items,
+      items,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -90,7 +90,7 @@ router.get('/pokemon/:id', async (req, res) => {
     const pokemon = pokemonData.get({ plain: true });
 
     res.render('pokemon', {
-      ...pokemon,
+      pokemon,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -112,7 +112,7 @@ router.get('/items/:id', async (req, res) => {
     const item = itemData.get({ plain: true });
 
     res.render('items', {
-      ...item,
+      item,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
