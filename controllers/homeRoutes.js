@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Trainer, Pokemon, Item, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
-
+// render hompage 
 router.get('/', async (req, res) => {
   try {
     // // Get all pokemons and JOIN with trainer data
@@ -32,15 +32,14 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-// GET all pokemon
+// render GET all pokemon
 router.get('/pokemon', async (req, res) => {
   try {
     const pokemonData = await Pokemon.findAll();
-    // res.status(200).json(pokemonData);
-    const pokemon = pokemonData.get({ plain: true });
+    const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
 
     res.render('pokemon', {
-      ...pokemon,
+      ...pokemons,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -48,25 +47,36 @@ router.get('/pokemon', async (req, res) => {
   }
 });
 
-// GET all orders
+// render GET all orders
 router.get('/orders', async (req, res) => {
   try {
     const orderData = await Order.findAll();
-    res.status(200).json(orderData);
+    const orders = orderData.map((order) => order.get({ plain: true }));
+
+    res.render('order', {
+      ...orders,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-// GET all items
+// render GET all items
 router.get('/items', async (req, res) => {
   try {
     const itemData = await Item.findAll();
-    res.status(200).json(itemData);
+    const items = itemData.map((item) => item.get({ plain: true }));
+
+    res.render('item', {
+      ...items,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+// render by pokemon id 
 router.get('/pokemon/:id', async (req, res) => {
   try {
     const pokemonData = await Pokemon.findByPk(req.params.id, {
@@ -102,7 +112,7 @@ router.get('/items/:id', async (req, res) => {
 
     const item = itemData.get({ plain: true });
 
-    res.render('item', {
+    res.render('items', {
       ...item,
       logged_in: req.session.logged_in
     });

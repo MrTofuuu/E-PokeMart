@@ -1,9 +1,11 @@
 <div class="item-card card" style="width: 18rem">
     <img class="card-img-top" src="item-sprite" alt="Card image cap" />
     <div class="card-body">
-        <h5 class="card-title"><!-- {{poke.name}} --></h5>
-        <p class="card-text"><!-- {{poke.description}}--></p>
-
+        <h5 class="card-title">Pokemon:{{pokemon_name}}</h5>
+        <p class="card-text">Type:{{> Pokemon}}</p>
+        {{#each pokemons as |pokemon}}
+        {{> pokemon-details}}
+        {{/each}}
         <a href="" id="pokemon-button" class="btn btn-primary">
             Add to cart!
         </a>
