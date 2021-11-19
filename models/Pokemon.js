@@ -34,6 +34,10 @@ Pokemon.init(
             },
             allowNull: true,
         },
+        pokemon_sprites: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,
