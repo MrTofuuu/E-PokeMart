@@ -11,11 +11,11 @@ Item.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        item_name: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        item_type: {
+        type: {
             type: DataTypes.STRING,
         },
         price: {
@@ -30,7 +30,7 @@ Item.init(
             },
             allowNull: true,
         },
-        item_sprites: {
+        sprites: {
             type: DataTypes.STRING,
             allowNull: false,
         },
