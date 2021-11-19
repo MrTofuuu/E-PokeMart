@@ -30,6 +30,10 @@ Item.init(
             },
             allowNull: true,
         },
+        item_sprites: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,
