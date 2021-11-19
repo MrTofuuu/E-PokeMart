@@ -4,7 +4,7 @@ const orderData = [
   {
     order_id: '1',
     trainer_id: '1',
-    'order_date=': '11/14/2021',
+    order_date: '11/14/2021',
     order_status: 'Shipped',
     order_quantity: '1',
   },
