@@ -8,6 +8,7 @@ const pokemonData = [
     pokemon_type: 'Grass',
     price: '2',
     trainer_id: '1',
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
   },
   {
     pokemon_id: '2',
@@ -16,6 +17,7 @@ const pokemonData = [
     pokemon_type: 'Water',
     price: '2',
     trainer_id: '2',
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
   },
   {
     pokemon_id: '3',
@@ -24,6 +26,7 @@ const pokemonData = [
     pokemon_type: 'Fire',
     price: '2',
     trainer_id: '3',
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png',
   },
   {
     pokemon_id: '4',
@@ -32,6 +35,7 @@ const pokemonData = [
     pokemon_type: 'Normal',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png',
   },
   {
     pokemon_id: '5',
@@ -40,6 +44,7 @@ const pokemonData = [
     pokemon_type: 'Electric',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
   },
   {
     pokemon_id: '6',
@@ -48,6 +53,7 @@ const pokemonData = [
     pokemon_type: 'Grass',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png',
   },
   {
     pokemon_id: '7',
@@ -56,6 +62,7 @@ const pokemonData = [
     pokemon_type: 'Fire',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png',
   },
   {
     pokemon_id: '8',
@@ -64,6 +71,7 @@ const pokemonData = [
     pokemon_type: 'Water',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png',
   },
   {
     pokemon_id: '9',
@@ -72,6 +80,7 @@ const pokemonData = [
     pokemon_type: 'Grass',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png',
   },
   {
     pokemon_id: '10',
@@ -80,6 +89,7 @@ const pokemonData = [
     pokemon_type: 'Fire',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png',
   },
   {
     pokemon_id: '11',
@@ -88,6 +98,7 @@ const pokemonData = [
     pokemon_type: 'Water',
     price: '2',
     trainer_id: null,
+    pokemon_sprites: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png',
   },
 ];
 
