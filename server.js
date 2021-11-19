@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const fs = require('fs');
+const rfs = require('rotating-file-stream');
 const path = require('path');
 const dirPath = path.join(__dirname, '/logs');
 const session = require('express-session');
@@ -24,14 +24,22 @@ const sess = {
   }),
 };
 
+<<<<<<< HEAD
 // create a write stream (in append mode)
 let accessLogStream = fs.createWriteStream(
   path.join(dirPath, 'apiRequests.log'),
   { flags: 'a' }
 );
+=======
+morgan.token("custom", ":date[clf] A new :method request for :url was received. The version of the HTTP request was :http-version. It took this long for a response :response-time[3]. It took a total of :total-time[3] to complete. The IP address of the request was :remote-addr");
 
-//start logging prior to routing
-app.use(morgan('combined', { stream: accessLogStream }));
+let accessLogStream = rfs.createStream('apiRequests.log',{
+  interval: '1d',
+  path: dirPath
+})
+>>>>>>> main
+
+app.use(morgan('custom', { stream: accessLogStream }));
 
 app.use(session(sess));
 app.engine('handlebars', hbs.engine);
@@ -44,5 +52,5 @@ app.use('/public', express.static(path.resolve('./public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening on port 3001'));
+  app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 });
