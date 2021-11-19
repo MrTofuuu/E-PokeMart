@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
 const { Trainer } = require('../models');
 
-const trainerData = require('./trainerData.json');
+const trainerData = require('./trainerData');
 const seedCatalog = require('./catalogData.js');
 const seedOrders = require('./orderData.js');
 
@@ -13,9 +13,7 @@ const seedAll = async () => {
       individualHooks: true,
       returning: true,
     });
-
     await seedCatalog();
-
     await seedOrders();
   } catch (err) {
     console.log(err);
