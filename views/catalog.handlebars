@@ -1,0 +1,24 @@
+{{#each catalogs as |catalog| }}
+<div class="item-card card" style="width: 18rem">
+    <img class="card-img-top" src="{{{sprites}}}" alt="Card image cap" />
+    <div class="card-body">
+        <h5 class="card-title">Items: {{item_name}}</h5>
+        <p class="card-text">Type: {{item_types}}</p>
+        <p class="card-text">Price: {{item_price}}</p>
+        <a href="" id="pokemon-button" class="btn btn-primary">
+            Add to cart!
+        </a>
+    </div>
+</div>
+<div class="item-card card" style="width: 18rem">
+    <img class="card-img-top" src="{{{pokeon_sprites}}}" alt="Card image cap" />
+    <div class="card-body">
+        <h5 class="card-title">Items: {{pokemon_name}}</h5>
+        <p class="card-text">Type: {{pokemon_types}}</p>
+        <p class="card-text">Price: {{pokemon_price}}</p>
+        <a href="" id="pokemon-button" class="btn btn-primary">
+            Add to cart!
+        </a>
+    </div>
+</div>
+{{/each}}

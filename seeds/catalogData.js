@@ -1,17 +1,19 @@
-const { Item } = require('../models');
+const { Catalog } = require('../models');
 
-const itemData = [
+const catalogData = [
   {
-    item_id: '1',
-    name: 'Master ball',
-    types: 'pokeball',
-    price: '1000',
+    id: '1',
+    category: 'item',
+    item_name: 'Master ball',
+    item_types: 'pokeball',
+    item_price: '1000',
     trainer_id: '1',
-    sprites:
+    item_sprites:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png',
   },
   {
-    item_id: '2',
+    id: '2',
+    category: 'item',
     name: 'Awakening',
     types: 'Medical item',
     price: '10',
@@ -20,7 +22,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png',
   },
   {
-    item_id: '3',
+    id: '3',
+    category: 'item',
     name: 'Paralyze-heal',
     types: 'Medical item',
     price: '10',
@@ -29,7 +32,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png',
   },
   {
-    item_id: '4',
+    id: '4',
+    category: 'item',
     name: 'full-restore',
     types: 'Medical item',
     price: '15',
@@ -38,7 +42,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png',
   },
   {
-    item_id: '5',
+    id: '5',
+    category: 'item',
     name: 'max-potion',
     types: 'Medical item',
     price: '13',
@@ -47,7 +52,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png',
   },
   {
-    item_id: '6',
+    id: '6',
+    category: 'item',
     name: 'hyper-potion',
     types: 'Medical item',
     price: '12',
@@ -56,7 +62,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png',
   },
   {
-    item_id: '7',
+    id: '7',
+    category: 'item',
     name: 'super-potion',
     types: 'Medical item',
     price: '10',
@@ -65,7 +72,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png',
   },
   {
-    item_id: '8',
+    id: '8',
+    category: 'item',
     name: 'Ultra Ball',
     types: 'pokeball',
     price: '15',
@@ -74,7 +82,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png',
   },
   {
-    item_id: '9',
+    id: '9',
+    category: 'item',
     name: 'Great ball',
     types: 'pokeball',
     price: '13',
@@ -83,7 +92,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png',
   },
   {
-    item_id: '10',
+    id: '10',
+    category: 'item',
     name: 'Poke ball',
     types: 'pokeball',
     price: '5',
@@ -92,7 +102,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png',
   },
   {
-    item_id: '11',
+    id: '11',
+    category: 'item',
     name: 'Potion',
     types: 'Medical item',
     price: '5',
@@ -101,7 +112,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png',
   },
   {
-    item_id: '12',
+    id: '12',
+    category: 'item',
     name: 'Full heal',
     types: 'Medical item',
     price: '10',
@@ -110,7 +122,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png',
   },
   {
-    item_id: '13',
+    id: '13',
+    category: 'item',
     name: 'Revive',
     types: 'Medical item',
     price: '10',
@@ -119,7 +132,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png',
   },
   {
-    item_id: '14',
+    id: '14',
+    category: 'item',
     name: 'Max revive',
     types: 'Medical item',
     price: '20',
@@ -128,7 +142,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png',
   },
   {
-    item_id: '15',
+    id: '15',
+    category: 'item',
     name: 'X Attack',
     types: 'Battle item',
     price: '10',
@@ -137,7 +152,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-attack.png',
   },
   {
-    item_id: '16',
+    id: '16',
+    category: 'item',
     name: 'X Defense',
     types: 'Battle item',
     price: '10',
@@ -146,7 +162,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-defense.png',
   },
   {
-    item_id: '17',
+    id: '17',
+    category: 'item',
     name: 'X Speed',
     types: 'Battle item',
     price: '10',
@@ -155,7 +172,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-speed.png',
   },
   {
-    item_id: '18',
+    id: '18',
+    category: 'item',
     name: 'X Special attack',
     types: 'Battle item',
     price: '10',
@@ -164,7 +182,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-atk.png',
   },
   {
-    item_id: '19',
+    id: '19',
+    category: 'item',
     name: 'Burn heal',
     types: 'Medical item',
     price: '10',
@@ -173,7 +192,8 @@ const itemData = [
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png',
   },
   {
-    item_id: '20',
+    id: '20',
+    category: 'item',
     name: 'Ice heal',
     types: 'Medical item',
     price: '10',
@@ -181,8 +201,129 @@ const itemData = [
     sprites:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png',
   },
+  {
+    id: '21',
+    category: 'pokemon',
+    name: 'Bulbasaur',
+    level: '1',
+    types: 'Grass',
+    price: '750',
+    trainer_id: '1',
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
+  },
+  {
+    id: '22',
+    category: 'pokemon',
+    name: 'Squirtle',
+    level: '1',
+    types: 'Water',
+    price: '750',
+    trainer_id: '2',
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
+  },
+  {
+    id: '23',
+    category: 'pokemon',
+    name: 'Charmander',
+    level: '1',
+    types: 'Fire',
+    price: '750',
+    trainer_id: '3',
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png',
+  },
+  {
+    id: '24',
+    category: 'pokemon',
+    name: 'Eevee',
+    level: '1',
+    types: 'Normal',
+    price: '1000',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png',
+  },
+  {
+    id: '25',
+    category: 'pokemon',
+    name: 'Pikachu',
+    level: '1',
+    types: 'Electric',
+    price: '1000',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
+  },
+  {
+    id: '26',
+    category: 'pokemon',
+    name: 'Chikorita',
+    level: '1',
+    types: 'Grass',
+    price: '500',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png',
+  },
+  {
+    id: '27',
+    category: 'pokemon',
+    name: 'Cyndaquil',
+    level: '1',
+    types: 'Fire',
+    price: '500',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png',
+  },
+  {
+    id: '28',
+    category: 'pokemon',
+    name: 'Totodile',
+    level: '1',
+    types: 'Water',
+    price: '500',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png',
+  },
+  {
+    id: '29',
+    category: 'pokemon',
+    name: 'Treecko',
+    level: '1',
+    types: 'Grass',
+    price: '500',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png',
+  },
+  {
+    id: '30',
+    category: 'pokemon',
+    name: 'Torchic',
+    level: '1',
+    types: 'Fire',
+    price: '500',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png',
+  },
+  {
+    id: '31',
+    category: 'pokemon',
+    name: 'Mudkip',
+    level: '1',
+    types: 'Water',
+    price: '500',
+    trainer_id: null,
+    sprites:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png',
+  },
 ];
 
-const seedItems = () => Item.bulkCreate(itemData);
+const seedItems = () => Item.bulkCreate(catalogData);
 
 module.exports = seedItems;

@@ -1,10 +1,9 @@
 const sequelize = require('../config/connection');
-const { Trainer, Pokemon, Order, Item } = require('../models');
+const { Trainer } = require('../models');
 
 const trainerData = require('./trainerData.json');
-const seedItems = require('./itemData.js');
+const seedCatalog = require('./catalogData.js');
 const seedOrders = require('./orderData.js');
-const seedPokemon = require('./pokemonData.js');
 
 const seedAll = async () => {
   try {
@@ -15,9 +14,7 @@ const seedAll = async () => {
       returning: true,
     });
 
-    await seedPokemon();
-
-    await seedItems();
+    await seedCatalog();
 
     await seedOrders();
   } catch (err) {

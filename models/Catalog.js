@@ -1,30 +1,38 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Pokemon extends Model {}
+class Catalog extends Model {}
 
-Pokemon.init(
+Catalog.init(
   {
-    pokemon_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    types: {
+      type: DataTypes.STRING,
+    },
+    price: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    },
+    sprites: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     level: {
       type: DataTypes.INTEGER,
-    },
-    types: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    price: {
-      type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: true,
     },
     trainer_id: {
       type: DataTypes.INTEGER,
@@ -34,18 +42,15 @@ Pokemon.init(
       },
       allowNull: true,
     },
-    sprites: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
   },
+
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'pokemon',
+    modelName: 'catalog',
   }
 );
 
-module.exports = Pokemon;
+module.exports = Catalog;

@@ -32,13 +32,13 @@ router.get('/', async (req, res) => {
   }
 });
 // render GET all pokemon
-router.get('/pokemon', async (req, res) => {
+router.get('/catalog', async (req, res) => {
   try {
-    const pokemonData = await Pokemon.findAll();
-    const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
+    const catalogData = await Catalog.findAll();
+    const catalogs = catalogData.map((catalog) => catalog.get({ plain: true }));
 
-    res.render('pokemon', {
-      pokemons,
+    res.render('catalog', {
+      catalogs,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -60,25 +60,10 @@ router.get('/order', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// render GET all items
-router.get('/items', async (req, res) => {
-  try {
-    const itemData = await Item.findAll();
-    const items = itemData.map((item) => item.get({ plain: true }));
-
-    res.render('items', {
-      items,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 // render by pokemon id
-router.get('/pokemon/:id', async (req, res) => {
+router.get('/catalog/:id', async (req, res) => {
   try {
-    const pokemonData = await Pokemon.findByPk(req.params.id, {
+    const catalogData = await Catalog.findByPk(req.params.id, {
       include: [
         {
           model: Trainer,
@@ -87,32 +72,10 @@ router.get('/pokemon/:id', async (req, res) => {
       ],
     });
 
-    const pokemon = pokemonData.get({ plain: true });
+    const catalog = catalogData.get({ plain: true });
 
-    res.render('pokemon', {
-      pokemon,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/items/:id', async (req, res) => {
-  try {
-    const itemData = await Item.findByPk(req.params.id, {
-      include: [
-        {
-          model: Trainer,
-          attributes: ['full_name'],
-        },
-      ],
-    });
-
-    const item = itemData.get({ plain: true });
-
-    res.render('items', {
-      item,
+    res.render('catalog', {
+      catalog,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -126,7 +89,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in trainer based on the session ID
     const trainerData = await Trainer.findByPk(req.session.trainer_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Pokemon, Item }],
+      include: [{ model: Catalog }],
     });
 
     const trainer = trainerData.get({ plain: true });
