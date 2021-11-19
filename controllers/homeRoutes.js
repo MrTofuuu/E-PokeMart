@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Trainer, Pokemon, Item, Order } = require('../models');
+const { Trainer, Catalog, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
 // render hompage
