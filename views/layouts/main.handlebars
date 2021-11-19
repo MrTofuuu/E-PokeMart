@@ -46,7 +46,7 @@
                     </button>
                     <ul class="dropdown-menu">
                         {{#if logged_in}}
-                        <li><a class="dropdown-item" href="/trainer">My Trainer Profile</a></li> |
+                        <li><a class="dropdown-item" href="/profile">My Trainer Profile</a></li> |
                         <li><button class="no-button" id="logout">logout</button></li>
                         <button class="no-button" id="logout">logout</button>
                         {{else}}
@@ -61,18 +61,14 @@
     <section>
         <div class="row">
             {{{body}}}
-
         </div>
-
     </section>
-    
     <section>
         <footer class="footer mt-auto py-3 page-footer pt-4">
             <div class="container-fluid text-center text-md-left">
                 <div class="footer-copyright text-center py-3">© 2021 Squirtle Squad Copyright ⚡
                 </div>
             </div>
-
         </footer>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

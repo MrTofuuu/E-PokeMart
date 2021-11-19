@@ -3,12 +3,9 @@
     <div class="card-body">
         <h5 class="card-title">Pokemon:{{pokemon_name}}</h5>
         <p class="card-text">Type:{{> Pokemon}}</p>
-        {{/each}}
         {{#each pokemons as |pokemon}}
-{{> pokemon-details}}
-{{/each}}
-    
-
+        {{> pokemon-details}}
+        {{/each}}
         <a href="" id="pokemon-button" class="btn btn-primary">
             Add to cart!
         </a>
