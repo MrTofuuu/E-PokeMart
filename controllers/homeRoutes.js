@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Trainer, Pokemon, Item, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
-// render hompage 
+// render hompage
 router.get('/', async (req, res) => {
   try {
     // // Get all pokemons and JOIN with trainer data
@@ -21,12 +21,11 @@ router.get('/', async (req, res) => {
 
     // // Serialize data so the template can read it
     // const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
-    
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      // pokemons, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      // pokemons,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -40,7 +39,7 @@ router.get('/pokemon', async (req, res) => {
 
     res.render('pokemon', {
       ...pokemons,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -48,14 +47,14 @@ router.get('/pokemon', async (req, res) => {
 });
 
 // render GET all orders
-router.get('/orders', async (req, res) => {
+router.get('/order', async (req, res) => {
   try {
     const orderData = await Order.findAll();
     const orders = orderData.map((order) => order.get({ plain: true }));
 
     res.render('order', {
       ...orders,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -68,15 +67,15 @@ router.get('/items', async (req, res) => {
     const itemData = await Item.findAll();
     const items = itemData.map((item) => item.get({ plain: true }));
 
-    res.render('item', {
+    res.render('items', {
       ...items,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-// render by pokemon id 
+// render by pokemon id
 router.get('/pokemon/:id', async (req, res) => {
   try {
     const pokemonData = await Pokemon.findByPk(req.params.id, {
@@ -92,7 +91,7 @@ router.get('/pokemon/:id', async (req, res) => {
 
     res.render('pokemon', {
       ...pokemon,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -114,7 +113,7 @@ router.get('/items/:id', async (req, res) => {
 
     res.render('items', {
       ...item,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -134,7 +133,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...trainer,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -142,7 +141,7 @@ router.get('/profile', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  console.log("this is inside of login route")
+  console.log('this is inside of login route');
   // If the trainer is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');
