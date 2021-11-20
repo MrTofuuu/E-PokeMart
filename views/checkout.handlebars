@@ -1,10 +1,11 @@
 {{#each carts as |cart| }}
-<div class="item-card card text-center" style="width: 18rem">
+<div id="checkoutCard" class="item-card card text-center" style="width: 18rem">
     <img class="card-img-top col mx-auto" src="{{{sprites}}}" alt="Card image cap" />
     <div class="card-body">
         <h5 class="card-title">Item: {{name}}</h5>
         <p class="card-text ">Type: {{types}}</p>
         <p class="card-text">Price: {{price}}</p>
+        <p class="card-text"></p>
   </div>
        <form id="form"class="form">
   <div class="form-group mx-sm-3 mb-2">

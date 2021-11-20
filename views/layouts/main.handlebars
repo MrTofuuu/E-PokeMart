@@ -50,9 +50,9 @@
                         <li><a class="dropdown-item" href="/profile">My Trainer Profile</a></li>
                         <li><button class="no-button" id="logout">logout</button></li>
                         {{else}}
-                        <li><a href="/login">login</a></li>
+                        <li><a href="/login">login</a></li=
                         {{/if}}
-                        <li><a class="dropdown-item" href="/order">Poke cart</a></li>
+                        <li><a class="dropdown-item" href="/order">Orders</a></li>
                         <li><a class="dropdown-item" href="/checkout">Checkout</a></li>
                         <li><a class="dropdown-item" href="/">Homepage</a></li>
                     </ul>
@@ -63,7 +63,7 @@
     <section>
         <div class="row">
             {{#if logged_in}}
-                Welcome{{trainer.full_name}}!
+                Welcome, {{full_name}}!
             {{/if}}
         </div>
     </section>
