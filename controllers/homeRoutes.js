@@ -115,7 +115,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const trainer = trainerData.get({ plain: true });
     const {catalogs}=trainer;
-    // console.log(trainer);
+    
     console.log(catalogs);
     res.render('profile', {
       trainer,
