@@ -1,7 +1,7 @@
 # E-PokeMart
 
 ## Description
-This is an Ecommerce application to buy pokemon and items. Created to cure boredom.
+Have you ever wanted to be the very best? Like no one ever was? Really?? Well so do we! To make your life as a pokemon trainer easier, we created an e-commerce platform so that you can buy the pokemon and items you need!
 
 
 ### Tasks completed
@@ -9,9 +9,9 @@ Created an Ecommerce PokeMart using handlebars, CSS, and Javascript.
 
 
 ## User Story
-AS A trainer
-I WANT to see what pokemon and items are available to buy
-SO THAT I can order the pokemon and items I want
+AS A trainer, I would like an ecommerce site to buy pokemon and items online <br/>
+I WANT to see what pokemon and items are available to buy <br/>
+SO THAT I can order the pokemon and items I want <br/>
 
 ```
 
@@ -74,7 +74,8 @@ node server.js
 
 ## Screenshots and Video Link of application
 
-![E-PokeMart Screenshot](./screenshots/e-pokemart.gif)
+![PokemartCatalog](https://user-images.githubusercontent.com/88115822/142718537-85b0f47e-2b1e-457f-85eb-fbb5be5e9c76.PNG)
+![PokemartSS](https://user-images.githubusercontent.com/88115822/142718546-3e90e438-4e04-45e2-b5c9-2053361a463e.PNG)
 
 
 ### Links
