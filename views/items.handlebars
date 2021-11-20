@@ -6,13 +6,12 @@
         <p class="card-text ">Type: {{types}}</p>
         <p class="card-text">Price: {{price}}</p>
   </div>
-        <div class="input-group">
-  <div class="input-group">
-    <span class= "mx-auto input-group-text"> <a href="" id="pokemon-button" class="btn btn-primary">
-            Add to cart!
-        </a></span>
+       <form id="form"class="form">
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" id="hidden-form" class="sr-only"></label>
+    <input data-id="{{{id}}}" class="hidden-form form-control" placeholder="{{{id}}}">
   </div>
-  <textarea id="hidden-form"class="form-control" aria-label="With textarea">{{id}}</textarea>
+  <button type="button" onClick="addToCart(this.id)" data-cmd="add" id="{{{id}}}" class="addToCart btn btn-primary mb-2">Add to cart!</button>
+</form>
 </div>
-    </div>
 {{/each}}
