@@ -31,7 +31,7 @@ let accessLogStream = rfs.createStream('apiRequests.log', {
   path: dirPath,
 });
 
-app.use(morgan('custom', { stream: accessLogStream }));
+app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use(session(sess));
 app.engine('handlebars', hbs.engine);
