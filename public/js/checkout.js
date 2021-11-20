@@ -8,6 +8,20 @@
 //   console.log(addItem[i]);
 // }
 
+// catalogInfo = require('');
+// const { Catalog } = require('../../models');
+
+let cart = [];
+let trainerArr = [];
+
+// function addToCart(clicked_id) {
+//   clicked_id = parseInt(clicked_id);
+//   cart.push(clicked_id);
+//   console.log(cart);
+// }
+
+// console.log(addToCart);
+
 let cart = [];
 let trainerArr = [];
 
