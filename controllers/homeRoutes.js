@@ -1,40 +1,40 @@
 const router = require('express').Router();
-const { Trainer, Pokemon, Item, Order } = require('../models');
+const { Trainer, Catalog, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
 // render hompage
 router.get('/', async (req, res) => {
   try {
-    // // Get all pokemons and JOIN with trainer data
-    // const pokemonData = await Pokemon.findAll({
-    //   include: [
-    //     {
-    //       model: Trainer,
-    //       attributes: ['full_name'],
-    //     },
-    //     {
-    //       model: Item,
-    //       attributes: ['item_id','item_name','item_type','price']
-    //     },
-    //   ],
-    // });
-
-    // // Serialize data so the template can read it
-    // const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
+    // render homepage
     res.render('homepage', {
-      // pokemons,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-// render GET all pokemon
+// render GET all full catalog
+router.get('/catalog', async (req, res) => {
+  try {
+    const catalogData = await Catalog.findAll();
+    const catalogs = catalogData.map((catalog) => catalog.get({ plain: true }));
+
+    res.render('catalog', {
+      catalogs,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+// render get all pokemon
 router.get('/pokemon', async (req, res) => {
   try {
-    const pokemonData = await Pokemon.findAll();
+    const pokemonData = await Catalog.findAll({
+      where: {
+        category: 'pokemon',
+      },
+    });
     const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
 
     res.render('pokemon', {
@@ -45,7 +45,24 @@ router.get('/pokemon', async (req, res) => {
     res.status(500).json(err);
   }
 });
+//render get all items
+router.get('/items', async (req, res) => {
+  try {
+    const itemsData = await Catalog.findAll({
+      where: {
+        category: 'item',
+      },
+    });
+    const items = itemsData.map((items) => items.get({ plain: true }));
 
+    res.render('items', {
+      items,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // render GET all orders
 router.get('/order', async (req, res) => {
   try {
@@ -60,25 +77,10 @@ router.get('/order', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// render GET all items
-router.get('/items', async (req, res) => {
+// render by pokemon or item id
+router.get('/catalog/:id', async (req, res) => {
   try {
-    const itemData = await Item.findAll();
-    const items = itemData.map((item) => item.get({ plain: true }));
-
-    res.render('items', {
-      items,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-// render by pokemon id
-router.get('/pokemon/:id', async (req, res) => {
-  try {
-    const pokemonData = await Pokemon.findByPk(req.params.id, {
+    const catalogData = await Catalog.findByPk(req.params.id, {
       include: [
         {
           model: Trainer,
@@ -87,32 +89,10 @@ router.get('/pokemon/:id', async (req, res) => {
       ],
     });
 
-    const pokemon = pokemonData.get({ plain: true });
+    const catalog = catalogData.get({ plain: true });
 
-    res.render('pokemon', {
-      pokemon,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/items/:id', async (req, res) => {
-  try {
-    const itemData = await Item.findByPk(req.params.id, {
-      include: [
-        {
-          model: Trainer,
-          attributes: ['full_name'],
-        },
-      ],
-    });
-
-    const item = itemData.get({ plain: true });
-
-    res.render('items', {
-      item,
+    res.render('catalog', {
+      catalog,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -126,13 +106,13 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in trainer based on the session ID
     const trainerData = await Trainer.findByPk(req.session.trainer_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Pokemon, Item }],
+      include: [{ model: Catalog }],
     });
 
     const trainer = trainerData.get({ plain: true });
 
     res.render('profile', {
-      ...trainer,
+      trainer,
       logged_in: true,
     });
   } catch (err) {
@@ -140,6 +120,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+// render login screen
 router.get('/login', (req, res) => {
   console.log('this is inside of login route');
   // If the trainer is already logged in, redirect the request to another route

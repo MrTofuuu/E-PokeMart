@@ -1,10 +1,9 @@
 const sequelize = require('../config/connection');
-const { Trainer, Pokemon, Order, Item } = require('../models');
+const { Trainer } = require('../models');
 
-const trainerData = require('./trainerData.json');
-const seedItems = require('./itemData.js');
+const trainerData = require('./trainerData');
+const seedCatalog = require('./catalogData.js');
 const seedOrders = require('./orderData.js');
-const seedPokemon = require('./pokemonData.js');
 
 const seedAll = async () => {
   try {
@@ -14,11 +13,7 @@ const seedAll = async () => {
       individualHooks: true,
       returning: true,
     });
-
-    await seedPokemon();
-
-    await seedItems();
-
+    await seedCatalog();
     await seedOrders();
   } catch (err) {
     console.log(err);

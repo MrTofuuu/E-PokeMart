@@ -1,4 +1,5 @@
-{{#each pokemons as |pokemon| }}
+{{#each carts as |cart| }}
+
 <div class="item-card card" style="width: 18rem">
     <img class="card-img-top" src="{{{sprites}}}" alt="Card image cap" />
     <div class="card-body">
@@ -6,8 +7,14 @@
         <p class="card-text">Type: {{types}}</p>
         <p class="card-text">Price: {{price}}</p>
         <a href="" id="pokemon-button" class="btn btn-primary">
-            Add to cart!
+            Delete!
         </a>
     </div>
+    
+</div>
+<div>
+    <a href="" id="pokemon-button" class="btn btn-primary">
+            Check out!
+        </a>
 </div>
 {{/each}}
