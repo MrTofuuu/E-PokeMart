@@ -54,11 +54,19 @@
                         {{/if}}
                         <li><a class="dropdown-item" href="/order">Poke cart</a></li>
                         <li><a class="dropdown-item" href="/checkout">Checkout</a></li>
+                        <li><a class="dropdown-item" href="/">Homepage</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <section>
+        <div class="row">
+            {{#if logged_in}}
+                Welcome, {{full_name}}!
+            {{/if}}
+        </div>
+    </section>
     <section>
         <div class="row">
             {{{body}}}

@@ -65,3 +65,11 @@ li {
   height: 125px;
   width: 125px;
 }
+
+#hidden-form {
+  visibility: hidden;
+}
+
+.input-group-text {
+  color: #005c96;
+}

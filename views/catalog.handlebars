@@ -1,15 +1,19 @@
 {{#each catalogs as |catalog| }}
 
-<div class="item-card card" style="width: 18rem">
-    <img class="card-img-top" src="{{{sprites}}}" alt="Card image cap" />
+<div class="item-card card text-center" style="width: 18rem">
+    <img class="card-img-top col mx-auto" src="{{{sprites}}}" alt="Card image cap" />
     <div class="card-body">
-        <h5 class="card-title">Items: {{name}}</h5>
-        <p class="card-text">Type: {{types}}</p>
+        <h5 class="card-title">Item: {{name}}</h5>
+        <p class="card-text ">Type: {{types}}</p>
         <p class="card-text">Price: {{price}}</p>
-        <a href="" id="pokemon-button" class="btn btn-primary">
+  </div>
+        <div class="input-group">
+  <div class="input-group">
+    <span class= "mx-auto input-group-text"> <a href="" id="pokemon-button" class="btn btn-primary">
             Add to cart!
-        </a>
-    </div>
-    
+        </a></span>
+  </div>
+  <textarea id="hidden-form"class="form-control" aria-label="With textarea">{{id}}</textarea>
 </div>
+    </div>
 {{/each}}
