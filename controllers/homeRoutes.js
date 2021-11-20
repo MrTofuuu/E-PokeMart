@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 // render hompage
 router.get('/', async (req, res) => {
   try {
-    // render homepage 
+    // render homepage
     res.render('homepage', {
       logged_in: req.session.logged_in,
     });
@@ -31,9 +31,9 @@ router.get('/catalog', async (req, res) => {
 router.get('/pokemon', async (req, res) => {
   try {
     const pokemonData = await Catalog.findAll({
-      where:{
-        category:'pokemon'
-      }
+      where: {
+        category: 'pokemon',
+      },
     });
     const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
 
@@ -49,9 +49,9 @@ router.get('/pokemon', async (req, res) => {
 router.get('/items', async (req, res) => {
   try {
     const itemsData = await Catalog.findAll({
-      where:{
-        category:'item'
-      }
+      where: {
+        category: 'item',
+      },
     });
     const items = itemsData.map((items) => items.get({ plain: true }));
 
@@ -112,7 +112,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const trainer = trainerData.get({ plain: true });
 
     res.render('profile', {
-      ...trainer,
+      trainer,
       logged_in: true,
     });
   } catch (err) {
@@ -120,7 +120,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-// render login screen 
+// render login screen
 router.get('/login', (req, res) => {
   console.log('this is inside of login route');
   // If the trainer is already logged in, redirect the request to another route
