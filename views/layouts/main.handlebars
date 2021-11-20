@@ -54,11 +54,19 @@
                         {{/if}}
                         <li><a class="dropdown-item" href="/order">Poke cart</a></li>
                         <li><a class="dropdown-item" href="/checkout">Checkout</a></li>
+                        <li><a class="dropdown-item" href="/">Homepage</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <section>
+        <div class="row">
+            {{#if logged_in}}
+                Welcome, {{full_name}}!
+            {{/if}}
+        </div>
+    </section>
     <section>
         <div class="row">
             {{{body}}}
@@ -79,8 +87,9 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
          {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
         {{/if}}
+    <script src="/js/checkout.js"></script>
 </body>
 
 </html>
