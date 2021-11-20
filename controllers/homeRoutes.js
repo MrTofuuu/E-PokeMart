@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-// render GET all pokemon
+// render GET all full catalog
 router.get('/catalog', async (req, res) => {
   try {
     const catalogData = await Catalog.findAll();
@@ -27,7 +27,42 @@ router.get('/catalog', async (req, res) => {
     res.status(500).json(err);
   }
 });
+// render get all pokemon
+router.get('/pokemon', async (req, res) => {
+  try {
+    const pokemonData = await Catalog.findAll({
+      where:{
+        category:'pokemon'
+      }
+    });
+    const pokemons = pokemonData.map((pokemon) => pokemon.get({ plain: true }));
 
+    res.render('pokemon', {
+      pokemons,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+//render get all items
+router.get('/items', async (req, res) => {
+  try {
+    const itemsData = await Catalog.findAll({
+      where:{
+        category:'item'
+      }
+    });
+    const items = itemsData.map((items) => items.get({ plain: true }));
+
+    res.render('items', {
+      items,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 // render GET all orders
 router.get('/order', async (req, res) => {
   try {
@@ -42,7 +77,7 @@ router.get('/order', async (req, res) => {
     res.status(500).json(err);
   }
 });
-// render by pokemon id
+// render by pokemon or item id
 router.get('/catalog/:id', async (req, res) => {
   try {
     const catalogData = await Catalog.findByPk(req.params.id, {
@@ -85,6 +120,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+// render login screen 
 router.get('/login', (req, res) => {
   console.log('this is inside of login route');
   // If the trainer is already logged in, redirect the request to another route
