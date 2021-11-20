@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const { Catalog } = require('../../models');
 
-// GET all items from Catalog
-router.get('/', async (req, res) => {
-  try {
-    const catalogData = await Catalog.findAll();
-    res.status(200).json(catalogData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// // GET all items from Catalog
+// router.get('/', async (req, res) => {
+//   try {
+//     const catalogData = await Catalog.findAll();
+//     res.status(200).json(catalogData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.post('/', async (req, res) => {
   try {
