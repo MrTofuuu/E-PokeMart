@@ -9,14 +9,14 @@ Created an Ecommerce PokeMart using handlebars, CSS, and Javascript.
 
 
 ## User Story
+```md
 AS A trainer, I would like an ecommerce site to buy pokemon and items online <br/>
 I WANT to see what pokemon and items are available to buy <br/>
 SO THAT I can order the pokemon and items I want <br/>
-
 ```
 
-
 ## Acceptance Criteria
+```md
 Use Node.js and Express.js to create a RESTful API.
 
 
@@ -57,11 +57,11 @@ Meet good-quality coding standards (file structure, naming conventions, follows 
 
 
 Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
+```
 ## Installation
 
 **HAVING NODE.JS INSTALLED IS A REQUIREMENT FOR THIS APPLICATION TO WORK!**
-
+```md
 1. Download all files from the repository.
 2. CD into the repository.
 3. Run this command to install all dependancies
