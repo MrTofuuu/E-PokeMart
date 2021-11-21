@@ -61,14 +61,16 @@ Have a professional README (with unique name, description, technologies used, sc
 ## Installation
 
 **HAVING NODE.JS INSTALLED IS A REQUIREMENT FOR THIS APPLICATION TO WORK!**
-```md
+
 1. Download all files from the repository.
 2. CD into the repository.
 3. Run this command to install all dependancies
-md
+```md
 npm install
+```
+
 4. Run this command to run the application
-md
+```md
 node server.js
 ```
 
