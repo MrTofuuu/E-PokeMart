@@ -68,8 +68,11 @@ Have a professional README (with unique name, description, technologies used, sc
 ```md
 npm install
 ```
-
-4. Run this command to run the application
+4. Run this command to seed the data for the application
+```md
+npm seed
+```
+5. Run this command to run the application
 ```md
 node server.js
 ```
